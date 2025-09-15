@@ -1,0 +1,358 @@
+{
+  "Company": {
+    "Volkswagen AG": {
+      "description": "German automotive manufacturing company",
+      "aliases": {
+        "ru": "Фольксваген АГ",
+        "en": "Volkswagen AG",
+        "kz": "Фольксваген АГ"
+      }
+    },
+    "Siemens AG": {
+      "description": "German multinational conglomerate company",
+      "aliases": {
+        "ru": "Сименс АГ",
+        "en": "Siemens AG",
+        "kz": "Сименс АГ"
+      }
+    },
+    "Allianz SE": {
+      "description": "German multinational financial services company",
+      "aliases": {
+        "ru": "Альянц СЕ",
+        "en": "Allianz SE",
+        "kz": "Альянз СЕ"
+      }
+    },
+    "BMW AG": {
+      "description": "German multinational company which produces luxury vehicles and motorcycles",
+      "aliases": {
+        "ru": "БМВ АГ",
+        "en": "BMW AG",
+        "kz": "БМВ АГ"
+      }
+    },
+    "BASF SE": {
+      "description": "German chemical company",
+      "aliases": {
+        "ru": "БАСФ СЕ",
+        "en": "BASF SE",
+        "kz": "БАСФ СЕ"
+      }
+    },
+    "Deutsche Telekom AG": {
+      "description": "German telecommunications company",
+      "aliases": {
+        "ru": "Дойче Телеком АГ",
+        "en": "Deutsche Telekom AG",
+        "kz": "Дойче Телеком АГ"
+      }
+    },
+    "Daimler AG": {
+      "description": "German multinational automotive corporation",
+      "aliases": {
+        "ru": "Даймлер АГ",
+        "en": "Daimler AG",
+        "kz": "Даймлер АГ"
+      }
+    },
+    "SAP SE": {
+      "description": "German multinational software corporation",
+      "aliases": {
+        "ru": "SAP СЕ",
+        "en": "SAP SE",
+        "kz": "SAP СЕ"
+      }
+    },
+    "Bayer AG": {
+      "description": "German multinational pharmaceutical and life sciences company",
+      "aliases": {
+        "ru": "Байер АГ",
+        "en": "Bayer AG",
+        "kz": "Байер АГ"
+      }
+    },
+    "Deutsche Bank AG": {
+      "description": "German multinational investment bank and financial services company",
+      "aliases": {
+        "ru": "Дойче Банк АГ",
+        "en": "Deutsche Bank AG",
+        "kz": "Дойче Банк АГ"
+      }
+    },
+    "Porsche AG": {
+      "description": "German automobile manufacturer specializing in high-performance sports cars",
+      "aliases": {
+        "ru": "Порше АГ",
+        "en": "Porsche AG",
+        "kz": "Порше АГ"
+      }
+    },
+    "Merck KGaA": {
+      "description": "German multinational pharmaceutical, chemical, and life sciences company",
+      "aliases": {
+        "ru": "Мерк КГаА",
+        "en": "Merck KGaA",
+        "kz": "Мерк КГаА"
+      }
+    }
+  },
+  "Period": {
+    "12/31/2017": {
+      "description": "End of fourth quarter 2017",
+      "aliases": {
+        "ru": "Конец четвертого квартала 2017",
+        "en": "End of fourth quarter 2017",
+        "kz": "2017 жылдың төртінші тоқсанының аяқталуы"
+      }
+    },
+    "12/31/2018": {
+      "description": "End of fourth quarter 2018",
+      "aliases": {
+        "ru": "Конец четвертого квартала 2018",
+        "en": "End of fourth quarter 2018",
+        "kz": "2018 жылдың төртінші тоқсанының аяқталуы"
+      }
+    },
+    "12/31/2019": {
+      "description": "End of fourth quarter 2019",
+      "aliases": {
+        "ru": "Конец четвертого квартала 2019",
+        "en": "End of fourth quarter 2019",
+        "kz": "2019 жылдың төртінші тоқсанының аяқталуы"
+      }
+    },
+    "12/31/2020": {
+      "description": "End of fourth quarter 2020",
+      "aliases": {
+        "ru": "Конец четвертого квартала 2020",
+        "en": "End of fourth quarter 2020",
+        "kz": "2020 жылдың төртінші тоқсанының аяқталуы"
+      }
+    },
+    "12/31/2021": {
+      "description": "End of fourth quarter 2021",
+      "aliases": {
+        "ru": "Конец четвертого квартала2021",
+        "en": "End of fourth quarter 2021",
+        "kz": "2021 жылдың төртінші тоқсанының аяқталуы"
+      }
+    },
+    "12/31/2022": {
+      "description": "End of fourth quarter 2022",
+      "aliases": {
+        "ru": "Конец четвертого квартала 2022",
+        "en": "End of fourth quarter 2022",
+        "kz": "2022 жылдың төртінші тоқсанының аяқталуы"
+      }
+    },
+    "12/31/2023": {
+      "description": "End of fourth quarter 2023",
+      "aliases": {
+        "ru": "Конец четвертого квартала 2023",
+        "en": "End of fourth quarter 2023",
+        "kz": "2023 төртінші тоқсанының аяқталуы"
+      }
+    },
+    "12/31/2024": {
+      "description": "End of fourth quarter 2024",
+      "aliases": {
+        "ru": "Конец четвертого квартала 2024",
+        "en": "End of fourth quarter 2024",
+        "kz": "2024 төртінші тоқсанының аяқталуы"
+      }
+    },
+    "3/31/2017": {
+      "description": "End of first quarter 2017",
+      "aliases": {
+        "ru": "Конец первого квартала 2017",
+        "en": "End of first quarter 2017",
+        "kz": "2017 жылдың бірінші тоқсанының аяқталуы"
+      }
+    },
+    "3/31/2018": {
+      "description": "End of first quarter 2018",
+      "aliases": {
+        "ru": "Конец первого квартала 2018",
+        "en": "End of first quarter 2018",
+        "kz": "2018 жылдың бірінші тоқсанының аяқталуы"
+      }
+    },
+    "3/31/2019": {
+      "description": "End of first quarter 2019",
+      "aliases": {
+        "ru": "Конец первого квартала 2019",
+        "en": "End of first quarter 2019",
+        "kz": "2019 жылдың бірінші тоқсанының аяқталуы"
+      }
+    },
+    "3/31/2020": {
+      "description": "End of first quarter 2020",
+      "aliases": {
+        "ru": "Конец первого квартала 2020",
+        "en": "End of first quarter 2020",
+        "kz": "2020 жылдың бірінші тоқсанының аяқталуы"
+      }
+    },
+    "3/31/2021": {
+      "description": "End of first quarter 2021",
+      "aliases": {
+        "ru": "Конец первого квартала 2021",
+        "en": "End of first quarter 2021",
+        "kz": "2021 жылдың бірінші тоқсанының аяқталуы"
+      }
+    },
+    "3/31/2022": {
+      "description": "End of first quarter 2022",
+      "aliases": {
+        "ru": "Конец первого квартала 2022",
+        "en": "End of first quarter 2022",
+        "kz": "2022 жылдың бірінші тоқсанының аяқталуы"
+      }
+    },
+    "3/31/2023": {
+      "description": "End of first quarter 2023",
+      "aliases": {
+        "ru": "Конец первого квартала 2023",
+        "en": "End of first quarter 2023",
+        "kz": "2023 жылдың бірінші тоқсанының аяқталуы"
+      }
+    },
+    "3/31/2024": {
+      "description": "End of the first quarter in 2024",
+      "aliases": {
+        "ru": "Конец первого квартала 2024 года",
+        "en": "End of the first quarter in 2024",
+        "kz": "2024 жылдың бірінші тоқсанының аяқталуы"
+      }
+    },
+    "6/30/2017": {
+      "description": "End of the second quarter in 2017",
+      "aliases": {
+        "ru": "Конец второго квартала 2017 года",
+        "en": "End of the second quarter in 2017",
+        "kz": "2017 жылдың екінші тоқсанының аяқталуы"
+      }
+    },
+    "6/30/2018": {
+      "description": "End of the second quarter in 2018",
+      "aliases": {
+        "ru": "Конец второго квартала 2018 года",
+        "en": "End of the second quarter in 2018",
+        "kz": "2018 жылдың екінші тоқсанының аяқталуы"
+      }
+    },
+    "6/30/2019": {
+      "description": "End of the second quarter in 2019",
+      "aliases": {
+        "ru": "Конец второго квартала 2019 года",
+        "en": "End of the second quarter in 2019",
+        "kz": "2019 жылдың екінші тоқсанының аяқталуы"
+      }
+    },
+    "6/30/2020": {
+      "description": "End of the second quarter in 2020",
+      "aliases": {
+        "ru": "Конец второго квартала 2020 года",
+        "en": "End of the second quarter in 2020",
+        "kz": "2020 жылдың екінші тоқсанының аяқталуы"
+      }
+    },
+    "6/30/2021": {
+      "description": "End of the second quarter in 2021",
+      "aliases": {
+        "ru": "Конец второго квартала 2021 года",
+        "en": "End of the second quarter in 2021",
+        "kz": "2021 жылдың екінші тоқсанының аяқталуы"
+      }
+    },
+    "6/30/2022": {
+      "description": "End of the second quarter in 2022",
+      "aliases": {
+        "ru": "Конец второго квартала 2022 года",
+        "en": "End of the second quarter in 2022",
+        "kz": "2022 жылдың екінші тоқсанының аяқталуы"
+      }
+    },
+    "6/30/2023": {
+      "description": "End of the second quarter in 2023",
+      "aliases": {
+        "ru": "Конец второго квартала 2023 года",
+        "en": "End of the second quarter in 2023",
+        "kz": "2023 жылдың екінші тоқсанының аяқталуы"
+      }
+    },
+    "6/30/2024": {
+      "description": "End of the second quarter in 2024",
+      "aliases": {
+        "ru": "Конец второго квартала 2024 года",
+        "en": "End of the second quarter in 2024",
+        "kz": "2024 жылдың екінші тоқсанының аяқталуы"
+      }
+    },
+    "9/30/2017": {
+      "description": "End of the third quarter in 2017",
+      "aliases": {
+        "ru": "Конец третьего квартала 2017 года",
+        "en": "End of the third quarter in 2017",
+        "kz": "2017 жылдың үшінші тоқсанының аяқталуы"
+      }
+    },
+    "9/30/2018": {
+      "description": "End of the third quarter in 2018",
+      "aliases": {
+        "ru": "Конец третьего квартала 2018 года",
+        "en": "End of the third quarter in 2018",
+        "kz": "2018 жылдың үшінші тоқсанының аяқталуы"
+      }
+    },
+    "9/30/2019": {
+      "description": "End of the third quarter in 2019",
+      "aliases": {
+        "ru": "Конец третьего квартала 2019 года",
+        "en": "End of the third quarter in 2019",
+        "kz": "2019 жылдың үшінші тоқсанының аяқталуы"
+      }
+    },
+    "9/30/2020": {
+      "description": "End of the third quarter in 2020",
+      "aliases": {
+        "ru": "Конец третьего квартала 2020 года",
+        "en": "End of the third quarter in 2020",
+        "kz": "2020 жылдың үшінші тоқсанының аяқталуы"
+      }
+    },
+    "9/30/2021": {
+      "description": "End of the third quarter in 2021",
+      "aliases": {
+        "ru": "Конец третьего квартала 2021 года",
+        "en": "End of the third quarter in 2021",
+        "kz": "2021 жылдың үшінші тоқсанының аяқталуы"
+      }
+    },
+    "9/30/2022": {
+      "description": "End of the third quarter in 2022",
+      "aliases": {
+        "ru": "Конец третьего квартала 2022 года",
+        "en": "End of the third quarter in 2022",
+        "kz": "2022 жылдың үшінші тоқсанының аяқталуы"
+      }
+    },
+    "9/30/2023": {
+      "description": "End of the third quarter, 2023",
+      "aliases": {
+        "ru": "30 сентября 2023",
+        "en": "September 30, 2023",
+        "kz": "2023 жылдың 30 қыркүйегі"
+      }
+    },
+    "9/30/2024": {
+      "description": "End of the third quarter, 2024",
+      "aliases": {
+        "ru": "Конец третьего квартала 2024 года",
+        "en": "End of the third quarter in 2024",
+        "kz": "2024 жылдың үшінші тоқсанының аяқталуы"
+      }
+    }
+  }
+}

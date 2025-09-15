@@ -1,0 +1,16 @@
+# FastAPI and Server
+fastapi
+uvicorn[standard]
+python-multipart
+
+# AI and LLMs
+openai
+sqlparse
+
+# Data and Database
+pandas
+sqlalchemy
+psycopg2-binary
+
+# Utilities
+python-dotenv

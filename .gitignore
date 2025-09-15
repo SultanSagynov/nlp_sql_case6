@@ -1,0 +1,15 @@
+# Файлы виртуального окружения
+.venv/
+venv/
+env/
+
+# Python кеш
+__pycache__/
+*.pyc
+
+# Файл с секретами
+.env
+
+# Папки IDE
+.vscode/
+.idea/
