@@ -1,51 +1,44 @@
 from fastapi import FastAPI, HTTPException, Depends, status
-from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from pydantic import BaseModel, Field
-from enum import Enum
 from typing import Optional
 
-# --- Импорт конфигурации и пайплайна ---
+# --- Импорт конфигурации и основной логики ---
 from config import logger, API_AUTH_KEY
 from pipeline import run_companies_pipeline
 
-# --- Enum для выбора модуля в API ---
-# На данный момент у нас один модуль, но это позволяет легко добавлять новые в будущем
-class BotModule(str, Enum):
-    companies = "companies"
-
-# --- Диспетчер для вызова нужного пайплайна ---
-# Связывает имя модуля из Enum с функцией пайплайна
-PIPELINE_DISPATCHER = {
-    BotModule.companies: run_companies_pipeline,
-}
-
-# --- Инициализация FastAPI ---
+# --- Инициализация FastAPI приложения ---
 app = FastAPI(
-    title="Promptологи",
-    description="Демо API для запросов финансовых данных по ведущим немецким компаниям.",
-    version="Demo 1.0.0"
+    title="Промптологи - Shai Pro Case 6",
+    description="Демо API для анализа финансовых данных (12_german_c).",
+    version="1.0.0"
 )
 
-# --- Настройка CORS (позволяет запросы с других доменов) ---
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"], 
     allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_methods=["*"],  
+    allow_headers=["*"], 
 )
 
+# --- Событие при старте приложения ---
 @app.on_event("startup")
 async def startup_event():
     logger.info("API сервер успешно запущен.")
 
-# --- Безопасность: проверка API ключа ---
+# --- Безопасность: схема и функция для проверки API ключа ---
 auth_scheme = HTTPBearer()
+
 def verify_api_key(credentials: Optional[HTTPAuthorizationCredentials] = Depends(auth_scheme)):
+    """
+    Проверяет, что в заголовке Authorization передан правильный Bearer токен.
+    """
     if not API_AUTH_KEY:
         logger.warning("API_AUTH_KEY не установлен; аутентификация пропускается.")
         return
+    
     if credentials is None or credentials.credentials != API_AUTH_KEY:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
@@ -54,30 +47,39 @@ def verify_api_key(credentials: Optional[HTTPAuthorizationCredentials] = Depends
 
 # --- Модели данных Pydantic для валидации запросов и ответов ---
 class ChatRequest(BaseModel):
+    """Модель для входящего запроса."""
     query: str = Field(..., min_length=1, description="Текстовый запрос пользователя")
-    module: BotModule = Field(..., description="Модуль для обработки запроса")
 
 class ChatResponse(BaseModel):
+    """Модель для исходящего ответа."""
     answer: str
-    module: str
 
-# --- HTTP эндпоинты ---
+# --- HTTP Эндпоинты ---
+
 @app.get("/health", summary="Проверка состояния сервиса")
 def health_check():
-    """Проверяет, что API сервис запущен и работает."""
+    """
+    Простой эндпоинт для проверки, что API сервис запущен и отвечает на запросы.
+    Используется системами мониторинга.
+    """
     return {"status": "ok"}
 
-@app.post("/chat", response_model=ChatResponse, summary="Отправить запрос чат-боту")
-async def http_chat_endpoint(request: ChatRequest, _=Depends(verify_api_key)):
-    """Основной эндпоинт для взаимодействия с ботом."""
-    pipeline_func = PIPELINE_DISPATCHER.get(request.module)
-    if not pipeline_func:
-        raise HTTPException(status_code=404, detail=f"Модуль '{request.module.value}' не найден.")
-    
+@app.post("/chat", 
+          response_model=ChatResponse, 
+          summary="Отправить запрос чат-боту",
+          dependencies=[Depends(verify_api_key)])
+async def http_chat_endpoint(request: ChatRequest):
+    """
+    Основной эндпоинт для взаимодействия с ботом.
+    Принимает вопрос пользователя, передает его в пайплайн и возвращает ответ.
+    """
     try:
-        logger.info(f"HTTP запрос для модуля: {request.module.value}")
-        answer = await pipeline_func(request.query)
-        return ChatResponse(answer=answer, module=request.module.value)
+        logger.info(f"Получен запрос: '{request.query}'")
+        # Вызываем основную логику из pipeline.py
+        answer = await run_companies_pipeline(request.query)
+        return ChatResponse(answer=answer)
     except Exception as e:
-        logger.exception(f"Ошибка в модуле {request.module.value} при обработке запроса.")
-        raise HTTPException(status_code=500, detail=f"Внутренняя ошибка сервера: {e}")
+        logger.exception("Критическая ошибка при обработке запроса в эндпоинте /chat.")
+        # Возвращаем общую ошибку, чтобы не раскрывать детали реализации
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, 
+                            detail="Внутренняя ошибка сервера.")
