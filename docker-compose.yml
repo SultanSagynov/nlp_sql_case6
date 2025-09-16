@@ -18,3 +18,5 @@ services:
 
     volumes:
       - .:/app
+    
+    restart: always
