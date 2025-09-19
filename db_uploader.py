@@ -19,7 +19,7 @@ engine = create_engine(DATABASE_URL)
 
 
 df.to_sql(
-    "german_companies",  
+    "top_12_german_companies",  
     engine,
     if_exists="replace",  
     index=False

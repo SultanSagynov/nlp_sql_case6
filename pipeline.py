@@ -43,7 +43,7 @@ async def generate_sql(user_query: str, schema: Dict, catalog: Dict, table_name:
 Запрос: какая выручка у Volkswagen за 2023 год?
 Ответ:
 {
-  "sql": "SELECT \\"Company\\", \\"Period\\", \\"Revenue\\" FROM dmart.top_12_german_companies WHERE \\"Company\\" = 'Volkswagen AG' AND \\"Period\\" LIKE '%2023' ORDER BY \\"Period\\"",
+  "sql": "SELECT \\"Company\\", \\"Period\\", \\"Revenue\\" FROM top_12_german_companies WHERE \\"Company\\" = 'Volkswagen AG' AND \\"Period\\" LIKE '%2023' ORDER BY \\"Period\\"",
   "clarified_prompt": "Какая была выручка у компании Volkswagen AG за все периоды в 2023 году?",
   "metrics": ["Revenue"],
   "groups": ["Volkswagen AG"],
@@ -55,7 +55,7 @@ async def generate_sql(user_query: str, schema: Dict, catalog: Dict, table_name:
 Запрос: покажи активы и обязательства для BMW в 2022
 Ответ:
 {
-  "sql": "SELECT \\"Period\\", \\"Assets\\", \\"Liabilities\\" FROM dmart.top_12_german_companies WHERE \\"Company\\" = 'BMW AG' AND \\"Period\\" LIKE '%2022' ORDER BY \\"Period\\"",
+  "sql": "SELECT \\"Period\\", \\"Assets\\", \\"Liabilities\\" FROM top_12_german_companies WHERE \\"Company\\" = 'BMW AG' AND \\"Period\\" LIKE '%2022' ORDER BY \\"Period\\"",
   "clarified_prompt": "Какие были активы и обязательства у компании BMW AG в 2022 году?",
   "metrics": ["Assets", "Liabilities"],
   "groups": ["BMW AG"],
@@ -67,7 +67,7 @@ async def generate_sql(user_query: str, schema: Dict, catalog: Dict, table_name:
 Запрос: какая была суммарная чистая прибыль всех компаний в 2023 году?
 Ответ:
 {
-  "sql": "SELECT SUM(\\"Net Income\\") AS \\"Total Net Income\\" FROM dmart.top_12_german_companies WHERE \\"Period\\" LIKE '%2023'",
+  "sql": "SELECT SUM(\\"Net Income\\") AS \\"Total Net Income\\" FROM top_12_german_companies WHERE \\"Period\\" LIKE '%2023'",
   "clarified_prompt": "Какая была суммарная чистая прибыль всех компаний за 2023 год?",
   "metrics": ["Net Income"],
   "groups": [],
@@ -79,7 +79,7 @@ async def generate_sql(user_query: str, schema: Dict, catalog: Dict, table_name:
 Запрос: посчитай общую выручку для каждой компании за все время
 Ответ:
 {
-  "sql": "SELECT \\"Company\\", SUM(\\"Revenue\\") AS \\"Total Revenue\\" FROM dmart.top_12_german_companies GROUP BY \\"Company\\" ORDER BY \\"Total Revenue\\" DESC",
+  "sql": "SELECT \\"Company\\", SUM(\\"Revenue\\") AS \\"Total Revenue\\" FROM top_12_german_companies GROUP BY \\"Company\\" ORDER BY \\"Total Revenue\\" DESC",
   "clarified_prompt": "Какая общая выручка у каждой компании за весь доступный период?",
   "metrics": ["Revenue"],
   "groups": [],
@@ -91,7 +91,7 @@ async def generate_sql(user_query: str, schema: Dict, catalog: Dict, table_name:
 Запрос: какой ROE у компании SAP?
 Ответ:
 {
-  "sql": "SELECT \\"Period\\", \\"ROE (%)\\" FROM dmart.top_12_german_companies WHERE \\"Company\\" = 'SAP SE' ORDER BY \\"Period\\" DESC",
+  "sql": "SELECT \\"Period\\", \\"ROE (%)\\" FROM top_12_german_companies WHERE \\"Company\\" = 'SAP SE' ORDER BY \\"Period\\" DESC",
   "clarified_prompt": "Какой показатель ROE (%) был у компании SAP SE за все периоды?",
   "metrics": ["ROE (%)"],
   "groups": ["SAP SE"],
@@ -103,7 +103,7 @@ async def generate_sql(user_query: str, schema: Dict, catalog: Dict, table_name:
 Запрос: какая была выручка у Даймлер в 2019?
 Ответ:
 {
-  "sql": "SELECT SUM(\\"Revenue\\") AS \\"Total Annual Revenue\\" FROM dmart.top_12_german_companies WHERE \\"Company\\" = 'Daimler AG' AND \\"Period\\" LIKE '%2019'",
+  "sql": "SELECT SUM(\\"Revenue\\") AS \\"Total Annual Revenue\\" FROM top_12_german_companies WHERE \\"Company\\" = 'Daimler AG' AND \\"Period\\" LIKE '%2019'",
   "clarified_prompt": "Какая была суммарная годовая выручка у компании Daimler AG за 2019 год?",
   "metrics": ["Revenue"],
   "groups": ["Daimler AG"],
